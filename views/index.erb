@@ -1,0 +1,15 @@
+<h1>Our List of Places!!</h1>
+
+<p>Your Places:</p>
+<ul>
+  <% @places.each() do |place| %>
+  <li><%= place.name() %></li>
+  <% end %>
+</ul>
+
+<form action="/success" method="post">
+  <label for="name">Where have you been?</label>
+  <input type="text" name="name" id="name">
+
+  <button type="submit" class="btn btn-success">Save</button>
+</form>

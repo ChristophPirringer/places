@@ -5,6 +5,7 @@ describe Place do
 
   before() do
     @test_place = Place.new("cool foodstands")
+    Place.clear()
   end
 
   describe("#name")do
