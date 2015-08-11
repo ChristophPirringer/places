@@ -18,4 +18,11 @@ describe Place do
       expect(Place.all()).to(eq([]))
     end
   end
+
+  describe("#save") do
+    it('saves the object in the Class array') do
+      @test_place.save()
+      expect(Place.all()).to(eq([@test_place]))
+    end
+  end
 end
