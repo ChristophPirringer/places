@@ -13,4 +13,9 @@ describe Place do
     end
   end
 
+  describe(".all") do
+    it("return array of all the Places") do
+      expect(Place.all()).to(eq([]))
+    end
+  end
 end
