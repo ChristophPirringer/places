@@ -14,3 +14,8 @@ post("/success") do
   name.save()
   erb(:success)
 end
+
+get("/fresh_start") do
+  Place.clear()
+  erb(:fresh_start)
+end
