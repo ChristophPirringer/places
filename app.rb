@@ -9,13 +9,17 @@ get("/") do
 end
 
 post("/success") do
+  @places = Place.all()
   name = params.fetch("name")
   name = Place.new(name)
   name.save()
-  erb(:success)
+  erb(:index)
 end
 
 get("/fresh_start") do
+  @places = Place.all()
   Place.clear()
-  erb(:fresh_start)
+  erb(:index)
+  # sleep(3)
+  # click_link('meh')
 end
