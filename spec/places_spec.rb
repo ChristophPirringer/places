@@ -20,9 +20,17 @@ describe Place do
   end
 
   describe("#save") do
-    it('saves the object in the Class array') do
+    it('saves the place in the Places array') do
       @test_place.save()
       expect(Place.all()).to(eq([@test_place]))
+    end
+  end
+
+  describe('.clear') do
+    it('clears the Places array') do
+      @test_place.save()
+      Place.clear()
+      expect(Place.all()).to(eq([]))
     end
   end
 end
